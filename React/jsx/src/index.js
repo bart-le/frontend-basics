@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 const App = () => {
   return (
     <div>
-      <label for="name" class="label">
+      <label for="name" className="label">
         Enter name:
       </label>
       <input id="name" type="text" />
