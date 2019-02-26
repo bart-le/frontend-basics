@@ -3,6 +3,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+function getButtonText() {
+  return 'Click me!'
+}
+
 // Create a React component
 const App = () => {
   return (
@@ -11,7 +15,9 @@ const App = () => {
         Enter name:
       </label>
       <input id="name" type="text" />
-      <button style={{ backgroundColor: 'red', color: 'white' }}>Submit</button>
+      <button style={{ backgroundColor: 'red', color: 'white' }}>
+        {getButtonText()}
+      </button>
     </div>
   );
 };
