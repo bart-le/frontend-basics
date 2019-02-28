@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import faker from 'faker';
 
 import CommentDetails from './CommentDetails';
+import ApprovalCard from './ApprovalCard';
 
 const App = () => {
   return (
