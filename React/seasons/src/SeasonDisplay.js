@@ -15,7 +15,7 @@ const SeasonDisplay = (props) => {
 
   return (
     <div>
-      {text}
+      <h1>{text}</h1>
     </div>
   );
 };
