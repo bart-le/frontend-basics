@@ -24,6 +24,12 @@ h2 {
   margin-bottom: 10px;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .main-text { 
   text-align: justify;
   margin-bottom: 20px;
