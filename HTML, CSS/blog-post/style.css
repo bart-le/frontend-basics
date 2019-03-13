@@ -58,6 +58,7 @@ h2 {
   width: 75%;
   float: left;
   padding-right: 30px;
+  position: relative;
 }
 
 .other-posts {
@@ -77,4 +78,10 @@ h2 {
 .blog-post img {
   height: 150px;
   width: auto;
+}
+
+.date {
+  position: absolute;
+  top: 10px;
+  right: 30px;
 }
