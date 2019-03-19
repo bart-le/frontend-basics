@@ -34,15 +34,35 @@ section {
 /* HEADINGS */
 /* ==================================== */
 
+h1,
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
   color: #fff;
   font-size: 240%;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   word-spacing: 4px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 30px auto 0;
 }
 
 /* ==================================== */
