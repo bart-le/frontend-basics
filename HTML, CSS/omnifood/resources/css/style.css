@@ -17,6 +17,12 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* ==================================== */
 /* REUSABLE COMPONENTS */
 /* ==================================== */
