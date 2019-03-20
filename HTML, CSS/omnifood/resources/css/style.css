@@ -250,9 +250,6 @@ header {
 /* HOW IT WORKS */
 /* ==================================== */
 
-.steps-box {
-}
-
 .steps-box:first-child {
   text-align: right;
   padding-right: 3%;
@@ -272,6 +269,10 @@ header {
   margin-bottom: 50px;
 }
 
+.works-step:last-of-type {
+  margin-bottom: 80px;
+}
+
 .works-step div {
   color: #e67e22;
   display: inline-block;
@@ -284,4 +285,10 @@ header {
   float: left;
   font-size: 150%;
   margin-right: 25px;
+}
+
+.btn-app img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
 }
