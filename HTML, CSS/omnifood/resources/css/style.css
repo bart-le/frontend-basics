@@ -366,9 +366,20 @@ header {
 }
 
 blockquote {
+  margin-top: 40px;
   padding: 2%;
   font-style: italic;
   line-height: 145%;
+  position: relative;
+}
+
+blockquote:before {
+  font-size: 400%;
+  content: "\201C";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 
 cite {
