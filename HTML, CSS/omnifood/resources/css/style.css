@@ -414,3 +414,13 @@ cite img {
   padding: 15px;
   border-bottom: 1px solid #e8e8e8;
 }
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
