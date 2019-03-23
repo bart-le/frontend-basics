@@ -538,6 +538,13 @@ footer {
   font-size: 180%;
 }
 
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+  transition: color 0.2s;
+}
+
 .ion-social-facebook:hover {
   color: #3b5998;
 }
