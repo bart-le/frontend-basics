@@ -538,6 +538,22 @@ footer {
   font-size: 180%;
 }
 
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+  color: #55acee;
+}
+
+.ion-social-googleplus:hover {
+  color: #dc4e41;
+}
+
+.ion-social-instagram:hover {
+  color: #517fa4;
+}
+
 footer p {
   color: #888;
   text-align: center;
