@@ -417,6 +417,7 @@ cite img {
 
 .plan-box div:last-child {
   text-align: center;
+  border: 0;
 }
 
 .plan-price {
