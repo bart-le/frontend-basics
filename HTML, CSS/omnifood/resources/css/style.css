@@ -450,3 +450,12 @@ cite img {
 .plan-box ul li {
   padding: 5px 0;
 }
+
+/* ==================================== */
+/* FORM */
+/* ==================================== */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
