@@ -487,3 +487,11 @@ input[type=checkbox] {
 *:focus {
   outline: none;
 }
+
+/* ==================================== */
+/* FOOTER */
+/* ==================================== */
+
+footer {
+  background-color: #333;
+}
