@@ -516,3 +516,12 @@ footer {
 .social-links li:last-child {
   margin-right: 0;
 }
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+}
