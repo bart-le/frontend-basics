@@ -533,6 +533,11 @@ footer {
   color: #ddd;
 }
 
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 180%;
+}
+
 footer p {
   color: #888;
   text-align: center;
