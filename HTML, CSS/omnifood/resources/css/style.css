@@ -429,3 +429,11 @@ cite img {
 .plan-price-meal {
   font-size: 80%;
 }
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
