@@ -494,6 +494,7 @@ input[type=checkbox] {
 
 footer {
   background-color: #333;
+  padding: 50px;
 }
 
 .footer-nav {
