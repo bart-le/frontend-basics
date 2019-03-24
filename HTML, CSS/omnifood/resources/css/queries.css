@@ -4,6 +4,10 @@
     width: 100%;
     padding: 0 2%;
   }
+  
+  .row {
+    padding: 0 2%;
+  }
 }
 
 /* small tablets to big tablets: from 767px up to 1023px */
