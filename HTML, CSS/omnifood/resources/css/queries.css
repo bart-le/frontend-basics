@@ -21,9 +21,28 @@
   }
 
   .long-copy {
-    line-height: 145%;
     width: 80%;
     margin-left: 10%;
+  }
+
+  .steps-box {
+    margin-top: 10px;
+  }
+
+  .steps-box:last-child {
+    margin-top: 10px;
+  }
+
+  .works-steps {
+    margin-bottom: 40px;
+  }
+  
+  .works-steps:last-of-type {
+    margin-bottom: 60px;
+  }
+
+  .app-screen {
+    width: 50%;
   }
 }
 
