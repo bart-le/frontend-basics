@@ -103,6 +103,21 @@
     width: 100%;
     margin-left: 0;
   }
+  
+  .works-step div {
+    height: 40px;
+    width: 40px;
+    padding:45px;
+    margin-right: 15px;
+  }
+
+  .works-steps {
+    margin-bottom: 20px;
+  }
+  
+  .works-steps:last-of-type {
+    margin-bottom: 20px;
+  }
 }
 
 /* small phones: from 0 up to 480px */
