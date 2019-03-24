@@ -86,6 +86,10 @@
   .col {
     width: 100%;
   }
+
+  .main-nav {
+    display: none;
+  }
 }
 
 /* small phones: from 0 up to 480px */
