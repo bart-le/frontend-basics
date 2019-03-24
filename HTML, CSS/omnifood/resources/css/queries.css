@@ -104,6 +104,10 @@
     margin-left: 0;
   }
   
+  .steps-box:first-child {
+    text-align: center;
+  }
+
   .works-step div {
     height: 40px;
     width: 40px;
