@@ -82,6 +82,10 @@
   .hero-text-box {
     padding: 0 4%;
   }
+
+  .col {
+    width: 100%;
+  }
 }
 
 /* small phones: from 0 up to 480px */
