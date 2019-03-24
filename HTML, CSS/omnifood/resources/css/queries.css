@@ -104,6 +104,10 @@
     margin-left: 0;
   }
   
+  .app-screen {
+    width: 40%;
+  }
+
   .steps-box:first-child {
     text-align: center;
   }
