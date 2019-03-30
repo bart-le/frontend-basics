@@ -216,11 +216,16 @@ header {
           transform: translate(-50%, -50%);
 }
 
-.logo {
+.logo,
+.logo-black {
   height: 100px;
   width: auto;
   float: left;
   margin-top: 20px;
+}
+
+.logo-black {
+  display: none;
 }
 
 /* MAIN NAVIGATION */
@@ -267,6 +272,14 @@ header {
 .sticky .main-nav li a:visited {
   padding: 8px 0;
   color: #555;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .logo-black {
+  display: block;
 }
 
 /* ==================================== */
