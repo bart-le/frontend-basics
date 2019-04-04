@@ -216,8 +216,7 @@ header {
           transform: translate(-50%, -50%);
 }
 
-.logo,
-.logo-black {
+.logo {
   height: 100px;
   width: auto;
   float: left;
@@ -226,6 +225,10 @@ header {
 
 .logo-black {
   display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin-top: 5px;
 }
 
 /* MAIN NAVIGATION */
@@ -266,6 +269,10 @@ header {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav {
+  margin-top: 15px;
 }
 
 .sticky .main-nav li a:link,
