@@ -273,12 +273,12 @@ header {
 }
 
 .main-nav {
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-  padding: 15px 0;
+  padding: 16px 0;
   color: #555;
 }
 
