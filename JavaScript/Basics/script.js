@@ -90,6 +90,7 @@ x++;
 console.log(x);
 */
 // CODING CHALLENGE 1
+/*
 // // You and Bill are trying to compare your BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 // // 1. Store your mass and height in variables.
 // // 2. Calculate both your BMIs.
@@ -106,3 +107,33 @@ var BMIBill = massBill / (heightBill * heightBill);
 console.log(BMIBart, BMIBill);
 var isBartFatter = BMIBart > BMIBill;
 console.log('Is Bart fatter than Bill Gates? ' + isBartFatter);
+*/
+// IF/ELSE STATEMENTS
+var firstName = 'Bart';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will probably die alone.');
+}
+
+var isMarried = true;
+if (isMarried) {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will probably die alone.');
+}
+
+var massBart = 75;
+var heightBart = 1.72;
+var massBill = 70;
+var heightBill = 1.77;
+var BMIBart = massBart / (heightBart * heightBart);
+var BMIBill = massBill / (heightBill * heightBill);
+
+if (BMIBart > BMIBill) {
+  console.log('Bart is in worse shape than Bill.');
+} else {
+  console.log('Bill is in worse shape than Bart.');
+}
