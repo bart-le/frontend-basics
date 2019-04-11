@@ -140,6 +140,7 @@ if (BMIBart > BMIBill) {
 }
 */
 // BOOLEAN LOGIC
+/*
 var firstName = 'Bart';
 var age = 24;
 
@@ -151,4 +152,46 @@ if (age < 13) {
   console.log(firstName + ' is a young man.');
 } else {
   console.log(firstName + ' is a man.');
+}
+*/
+// TERNARY OPERATOR AND SWITCH STATEMENTS
+var firstName = 'Bart';
+var age = 24;
+
+// // TERNARY OPERATOR
+age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
+
+// // SWITCH STATEMENTS
+var job = 'developer';
+
+switch (job) {
+  case 'developer':
+  case 'programmer':
+    console.log(firstName + ' might work for Google some day.');
+    break;
+  case 'bartender':
+    console.log(firstName + ' gets people drunk.');
+    break;
+  case 'unemployed':
+    console.log(firstName + ' is broke.');
+    break;
+  default:
+    console.log(firstName + ' will get a coding job soon.');
+}
+
+switch (true) {
+  case age < 13:
+    console.log(firstName + ' is a boy.');
+    break;
+  case age >= 13 && age < 20:
+    console.log(firstName + ' is a teenager.');
+    break;
+  case age >= 20 && age < 30:
+    console.log(firstName + ' is a young man.');
+    break;
+  default:
+    console.log(firstName + ' is a man.');
 }
