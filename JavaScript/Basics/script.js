@@ -313,6 +313,7 @@ var isBartender = bart.indexOf('bartender') === -1 ? 'Bart is not a bartender.' 
 console.log(isBartender);
 */
 // CODING CHALLENGE 3
+/*
 // // Steve and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
 // // To tip the waiter a fair amount, Steve created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
 // // In the end, Steve would like to have 2 arrays:
@@ -345,3 +346,29 @@ var total = [
   bills[2] + tips[2]
 ];
 console.log(tips, total);
+*/
+// OBJECTS AND PROPERTIES
+// // OBJECT LITERAL
+var bart = {
+  firstName: 'Bart',
+  lastName: 'Le',
+  birthYear: 1995,
+  family: ['ma', 'pa'],
+  job: 'developer',
+  isMarried: false
+};
+console.log(bart.firstName);
+console.log(bart['lastName']);
+var x = 'birthYear';
+console.log(bart[x]);
+
+bart.job = 'bartender';
+bart['isMarried'] = true;
+console.log(bart);
+
+// // OBJECT CONSTRUCTOR
+var bill = new Object();
+bill.firstName = 'Bill';
+bill['lastName'] = 'Gates';
+bill.birthYear = 1955;
+console.log(bill);
