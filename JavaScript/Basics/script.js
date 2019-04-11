@@ -240,6 +240,7 @@ if (scoreKobe > scoreLeBron && scoreKobe > scoreShaq) {
 }
 */
 // FUNCTION STATEMENTS
+/*
 function calculateAge(birthYear) {
   return 2019 - birthYear;
 }
@@ -262,3 +263,21 @@ function yearsBeforeRetirement(year, firstName) {
 yearsBeforeRetirement(1995, 'Bart');
 yearsBeforeRetirement(1950, 'Steve');
 yearsBeforeRetirement(1971, 'Elon');
+*/
+// FUNCTION EXPRESSIONS
+var whatDoYouDo = function(job, firstName) {
+  switch(job) {
+    case 'developer':
+      return firstName + ' writes amazing code.';
+    case 'bartender':
+      return firstName + ' mixes delightful cocktails.';
+    case 'unemployed':
+      return firstName + ' will get a job soon!';
+    default:
+      return firstName + ' does something else.';
+  }
+}
+
+console.log(whatDoYouDo('developer', 'Bart'));
+console.log(whatDoYouDo('bartender', 'Jerry'));
+console.log(whatDoYouDo('astronaut', 'Neil'));
