@@ -61,6 +61,7 @@ var x;
 console.log(typeof x);
 */
 // OPERATOR PRECEDENCE
+/*
 var now = 2019;
 var yearBart = 1995;
 var fullAge = 18;
@@ -87,3 +88,21 @@ x += 10;
 console.log(x);
 x++;
 console.log(x);
+*/
+// CODING CHALLENGE 1
+// // You and Bill are trying to compare your BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+// // 1. Store your mass and height in variables.
+// // 2. Calculate both your BMIs.
+// // 3. Create a boolean variable containing information about whether Bill has a higher BMI than you.
+// // 4. Print a string to the console containing the variable from step 3. (Something like "Is Bill's BMI higher than yours? true").
+
+var massBart = 75;
+var heightBart = 1.72;
+var massBill = 70;
+var heightBill = 1.77;
+
+var BMIBart = massBart / (heightBart * heightBart);
+var BMIBill = massBill / (heightBill * heightBill);
+console.log(BMIBart, BMIBill);
+var isBartFatter = BMIBart > BMIBill;
+console.log('Is Bart fatter than Bill Gates? ' + isBartFatter);
