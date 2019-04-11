@@ -265,6 +265,7 @@ yearsBeforeRetirement(1950, 'Steve');
 yearsBeforeRetirement(1971, 'Elon');
 */
 // FUNCTION EXPRESSIONS
+/*
 var whatDoYouDo = function(job, firstName) {
   switch(job) {
     case 'developer':
@@ -281,3 +282,31 @@ var whatDoYouDo = function(job, firstName) {
 console.log(whatDoYouDo('developer', 'Bart'));
 console.log(whatDoYouDo('bartender', 'Jerry'));
 console.log(whatDoYouDo('astronaut', 'Neil'));
+*/
+// ARRAYS
+// // INITIALIZATION
+var names = ['Bart', 'Bill', 'Steve'];
+var years = new Array(1995, 1955, 1950);
+console.log(names[1]);
+console.log(names.length);
+
+// // DATA MUTATION
+names[1] = 'Elon';
+names[names.length] = 'Richard';
+console.log(names);
+
+// // DATA TYPE VARIETY
+var bart = ['Bart', 'Le', 1995, 'developer', true];
+bart.push('red');
+bart.unshift('Mr.');
+console.log(bart);
+
+bart.pop();
+bart.pop();
+bart.shift();
+console.log(bart);
+
+console.log(bart.indexOf(3));
+
+var isBartender = bart.indexOf('bartender') === -1 ? 'Bart is not a bartender.' : 'Bart is a bartender.';
+console.log(isBartender);
