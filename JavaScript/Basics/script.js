@@ -348,6 +348,7 @@ var total = [
 console.log(tips, total);
 */
 // OBJECTS AND PROPERTIES
+/*
 // // OBJECT LITERAL
 var bart = {
   firstName: 'Bart',
@@ -372,3 +373,19 @@ bill.firstName = 'Bill';
 bill['lastName'] = 'Gates';
 bill.birthYear = 1955;
 console.log(bill);
+*/
+// OBJECT METHODS
+var bart = {
+  firstName: 'Bart',
+  lastName: 'Le',
+  birthYear: 1995,
+  family: ['ma', 'pa'],
+  job: 'developer',
+  isMarried: false,
+  calcAge: function(birthYear) {
+    this.age = 2019 - birthYear;
+  }
+};
+
+bart.calcAge(1995);
+console.log(bart);
