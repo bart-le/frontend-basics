@@ -109,6 +109,7 @@ var isBartFatter = BMIBart > BMIBill;
 console.log('Is Bart fatter than Bill Gates? ' + isBartFatter);
 */
 // IF/ELSE STATEMENTS
+/*
 var firstName = 'Bart';
 var civilStatus = 'single';
 
@@ -136,4 +137,18 @@ if (BMIBart > BMIBill) {
   console.log('Bart is in worse shape than Bill.');
 } else {
   console.log('Bill is in worse shape than Bart.');
+}
+*/
+// BOOLEAN LOGIC
+var firstName = 'Bart';
+var age = 24;
+
+if (age < 13) {
+  console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) {
+  console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30) {
+  console.log(firstName + ' is a young man.');
+} else {
+  console.log(firstName + ' is a man.');
 }
