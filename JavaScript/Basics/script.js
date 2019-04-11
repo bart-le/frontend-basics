@@ -216,6 +216,7 @@ if (height == '23') {
 }
 */
 // CODING CHALLENGE 2
+/*
 // // Kobe and LeBron both play basketball in different teams. In the latest 3 games, Kobe's team scored 89, 120 and 103 points, while LeBron's team scored 116, 94 and 123 points.
 // // 1. Calculate the average score for each team.
 // // 2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
@@ -237,3 +238,27 @@ if (scoreKobe > scoreLeBron && scoreKobe > scoreShaq) {
 } else {
   console.log('There is a draw');
 }
+*/
+// FUNCTION STATEMENTS
+function calculateAge(birthYear) {
+  return 2019 - birthYear;
+}
+
+var ageBart = calculateAge(1995);
+var ageBill = calculateAge(1955);
+var ageSteve = calculateAge(1950);
+console.log(ageBart, ageBill, ageSteve);
+
+function yearsBeforeRetirement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log(firstName + ' is already retired.');
+  }
+}
+
+yearsBeforeRetirement(1995, 'Bart');
+yearsBeforeRetirement(1950, 'Steve');
+yearsBeforeRetirement(1971, 'Elon');
