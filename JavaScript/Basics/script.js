@@ -155,6 +155,7 @@ if (age < 13) {
 }
 */
 // TERNARY OPERATOR AND SWITCH STATEMENTS
+/*
 var firstName = 'Bart';
 var age = 24;
 
@@ -194,4 +195,21 @@ switch (true) {
     break;
   default:
     console.log(firstName + ' is a man.');
+}
+*/
+// TRUTHY/FALSY VALUES AND EQUALITY OPERATORS
+// // FALSY VALUES: undefined, null, NaN, 0, ''
+// // TRUTHY VALUES: not falsy values
+var height;
+height = 23;
+
+if (height || height === 0) {
+  console.log('Variable has been defined.');
+} else {
+  console.log('Variable has not been defined.');
+}
+
+// // EQUALITY OPERATORS
+if (height == '23') {
+  console.log('The == operator does type coercion.');
 }
