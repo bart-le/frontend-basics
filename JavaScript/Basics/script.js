@@ -198,6 +198,7 @@ switch (true) {
 }
 */
 // TRUTHY/FALSY VALUES AND EQUALITY OPERATORS
+/*
 // // FALSY VALUES: undefined, null, NaN, 0, ''
 // // TRUTHY VALUES: not falsy values
 var height;
@@ -212,4 +213,27 @@ if (height || height === 0) {
 // // EQUALITY OPERATORS
 if (height == '23') {
   console.log('The == operator does type coercion.');
+}
+*/
+// CODING CHALLENGE 2
+// // Kobe and LeBron both play basketball in different teams. In the latest 3 games, Kobe's team scored 89, 120 and 103 points, while LeBron's team scored 116, 94 and 123 points.
+// // 1. Calculate the average score for each team.
+// // 2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+// // 3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score).
+// // 4. EXTRA: Shaq also plays basketball, and his team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator to take the decision.
+// // 5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+
+var scoreKobe = (89 + 120 + 103) / 3;
+var scoreLeBron = (116 + 94 + 123) / 3;
+var scoreShaq = (97 + 134 + 105) / 3;
+console.log(scoreKobe, scoreLeBron, scoreShaq);
+
+if (scoreKobe > scoreLeBron && scoreKobe > scoreShaq) {
+  console.log('Kobe wins with ' + scoreKobe + ' points.');
+} else if (scoreLeBron > scoreKobe && scoreLeBron > scoreShaq) {
+  console.log('LeBron wins with ' + scoreLeBron + ' points.');
+} else if (scoreShaq > scoreKobe && scoreShaq > scoreLeBron) {
+  console.log('Shaq wins with ' + scoreShaq + ' points.');
+} else {
+  console.log('There is a draw');
 }
