@@ -35,6 +35,7 @@ var lastName = prompt('What is his last name?');
 console.log(firstName + ' ' + lastName);
 */
 // BASIC OPERATORS
+/*
 var now, yearBart, yearBill;
 now = 2019;
 ageBart = 24;
@@ -58,3 +59,31 @@ console.log(typeof ageBill);
 console.log(typeof 'Bill Gates is a co-founder of Microsoft.');
 var x;
 console.log(typeof x);
+*/
+// OPERATOR PRECEDENCE
+var now = 2019;
+var yearBart = 1995;
+var fullAge = 18;
+
+// // MULTIPLE OPERATORS
+var isFullAge = now - yearBart >= fullAge;
+console.log(isFullAge);
+
+// // GROUPING
+var ageBart = now - yearBart;
+var ageBill = 64;
+var average = (ageBart + ageBill) / 2;
+console.log(average);
+
+// // MULTIPLE ASSIGNMENTS
+var x, y;
+x = y = (3 + 5) * 4 - 6;
+console.log(x, y);
+
+// // MORE OPERATORS
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x++;
+console.log(x);
