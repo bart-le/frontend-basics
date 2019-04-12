@@ -1,4 +1,5 @@
 // HOISTING
+/*
 // // FUNCTIONS
 calculateAge(1995);
 function calculateAge(year) {
@@ -21,3 +22,33 @@ function foo() {
 
 foo();
 console.log(age);
+*/
+// SCOPE
+var a = 'Hello!';
+first();
+
+function first() {
+  var b = 'Hi!';
+  second();
+
+  function second() {
+    var c = 'Hey!';
+    console.log(a + b + c);
+  }
+}
+
+function first() {
+  var b = 'Hi!';
+  second();
+
+  function second() {
+      var c = 'Hey!';
+      third();
+  }
+}
+
+function third() {
+  var d = 'John';
+  // console.log(c);
+  console.log(a + d);
+}
