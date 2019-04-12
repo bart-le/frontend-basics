@@ -24,6 +24,7 @@ foo();
 console.log(age);
 */
 // SCOPE
+/*
 var a = 'Hello!';
 first();
 
@@ -52,3 +53,28 @@ function third() {
   // console.log(c);
   console.log(a + d);
 }
+*/
+// THIS
+var bart = {
+  name: 'Bart',
+  yearOfBirth: 1995,
+  calculateAge: function() {
+    console.log(this);
+    console.log(2019 - this.yearOfBirth);
+
+    function innerFunction() {
+      console.log(this);
+    }
+    innerFunction();
+  }
+};
+
+bart.calculateAge();
+
+var bill = {
+  name: 'Bill',
+  yearOfBirth: 1955
+};
+
+bill.calculateAge = bart.calculateAge;
+bill.calculateAge();
