@@ -392,6 +392,7 @@ bart.calcAge(1995);
 console.log(bart);
 */
 // CODING CHALLENGE 4
+/*
 // // Let's remember the first coding challenge where Bill and you compared their BMIs. Let's now implement the same functionality with objects and methods.
 // // 1. For each of them, create an object with properties for their full name, mass, and height.
 // // 2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
@@ -423,4 +424,39 @@ if (bart.calcBMI() > bill.calcBMI()) {
   console.log(bill.fullName + ' has a BMI of ' + bill.bmi + ', which is higher.');
 } else {
   console.log('They have the same BMI.');
+}
+*/
+// LOOPS AND ITERATION
+// FOR LOOP
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+var bart = ['Bart', 'Le', 1995, 'developer', true];
+for (var i = 0; i < bart.length; i++) {
+  console.log(bart[i]);
+}
+
+// // WHILE LOOP
+var i = 0;
+while (i < bart.length) {
+  console.log(bart[i]);
+  i++;
+}
+
+// // CONTINUE AND BREAK STATEMENTS
+var bart = ['Bart', 'Le', 1995, 'developer', true];
+for (var i = 0; i < bart.length; i++) {
+  if (typeof bart[i] !== 'string') continue;
+  console.log(bart[i]);
+}
+
+for (var i = 0; i < bart.length; i++) {
+  if (typeof bart[i] !== 'string') break;
+  console.log(bart[i]);
+}
+
+// // LOOPING BACKWARDS
+for (var i = bart.length - 1; i >= 0; i--) {
+  console.log(bart[i]);
 }
