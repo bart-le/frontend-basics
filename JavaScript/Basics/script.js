@@ -375,6 +375,7 @@ bill.birthYear = 1955;
 console.log(bill);
 */
 // OBJECT METHODS
+/*
 var bart = {
   firstName: 'Bart',
   lastName: 'Le',
@@ -389,3 +390,37 @@ var bart = {
 
 bart.calcAge(1995);
 console.log(bart);
+*/
+// CODING CHALLENGE 4
+// // Let's remember the first coding challenge where Bill and you compared their BMIs. Let's now implement the same functionality with objects and methods.
+// // 1. For each of them, create an object with properties for their full name, mass, and height.
+// // 2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+// // 3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+
+var bart = {
+  fullName: 'Bart Le',
+  mass: 75,
+  height: 1.72,
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+
+var bill = {
+  fullName: 'Bill Gates',
+  mass: 70,
+  height: 1.77,
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+
+if (bart.calcBMI() > bill.calcBMI()) {
+  console.log(bart.fullName + ' has a BMI of ' + bart.bmi + ', which is higher.');
+} else if (bill.bmi > bart.bmi) {
+  console.log(bill.fullName + ' has a BMI of ' + bill.bmi + ', which is higher.');
+} else {
+  console.log('They have the same BMI.');
+}
