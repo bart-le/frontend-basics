@@ -39,3 +39,9 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		document.querySelector('.dice').style.display = 'none';
 	}
 });
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+	scores[activePlayer] += roundScore;
+
+	document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+});
