@@ -1,4 +1,5 @@
 // PROTOTYPICAL INHERITANCE
+/*
 var Person = function(name, yearOfBirth, job) {
 	this.name = name;
 	this.yearOfBirth = yearOfBirth;
@@ -24,3 +25,21 @@ console.log(kobe.lastName);
 console.log(jim.lastName);
 console.log(bart);
 console.log(Person.prototype);
+*/
+// OBJECT.CREATE
+var personProto = {
+	calculateAge: function() {
+		console.log(2019 - this.yearOfBirth);
+	}
+};
+
+var bart = Object.create(personProto);
+bart.name = 'Bart';
+bart.yearOfBirth = 1995;
+bart.job = 'developer';
+
+var kobe = Object.create(personProto, {
+	name: { value: 'Kobe' },
+	yearOfBirth: { value: 1978 },
+	job: { value: 'athlete' }
+});
