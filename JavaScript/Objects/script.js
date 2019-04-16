@@ -46,6 +46,7 @@ var kobe = Object.create(personProto, {
 });
 */
 // PRIMITIVES VS. OBJECTS
+/*
 // // PRIMITIVES
 var a = 23;
 var b = a;
@@ -78,3 +79,37 @@ function change(a, b) {
 change(age, obj);
 console.log(age);
 console.log(obj.city);
+*/
+// PASSING FUNCTIONS AS ARGUMENTS
+var years = [1995, 1964, 1963, 1950, 2003];
+
+function arrCalc(arr, fn) {
+	var results = [];
+	for (i = 0; i < arr.length; i++) {
+		results.push(fn(arr[i]));
+	}
+	return results;
+}
+
+function calculateAge(el) {
+	return 2019 - el;
+}
+
+function legalAge(el) {
+	return el >= 18;
+}
+
+function maxHeartRate(el) {
+	if (el >= 18 && el <= 81) {
+	return Math.round(206.9 - (0.67 * el));
+	} else {
+		return -1;
+	}
+}
+
+var ages = arrCalc(years, calculateAge);
+var legal = arrCalc(ages, legalAge);
+var rates = arrCalc(ages, maxHeartRate);
+console.log(ages);
+console.log(legal);
+console.log(rates);
