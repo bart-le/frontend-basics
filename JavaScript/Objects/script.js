@@ -81,6 +81,7 @@ console.log(age);
 console.log(obj.city);
 */
 // PASSING FUNCTIONS AS ARGUMENTS
+/*
 var years = [1995, 1964, 1963, 1950, 2003];
 
 function arrCalc(arr, fn) {
@@ -113,3 +114,26 @@ var rates = arrCalc(ages, maxHeartRate);
 console.log(ages);
 console.log(legal);
 console.log(rates);
+*/
+// FUNCTIONS RETURNING FUNCTIONS
+function interviewQuestions(job) {
+	if (job === 'stormtrooper') {
+		return function(name) {
+			console.log(name + ', aren\'t you a little short for a stormtrooper?');
+		}
+	} else if (job === 'taxi driver') {
+		return function(name) {
+			console.log(name + ', you talkin\' to me?');
+		}
+	} else {
+		return function(name) {
+			console.log(name + '? Why do you keep calling me ' + name + '?');
+		}
+	}
+}
+
+var stormtrooperQuestion = interviewQuestions('stormtrooper');
+var taxiQuestion = interviewQuestions('taxi driver');
+stormtrooperQuestion('Luke');
+taxiQuestion('Travis');
+interviewQuestions('developer')('Bart');
