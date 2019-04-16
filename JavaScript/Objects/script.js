@@ -116,6 +116,7 @@ console.log(legal);
 console.log(rates);
 */
 // FUNCTIONS RETURNING FUNCTIONS
+/*
 function interviewQuestions(job) {
 	if (job === 'stormtrooper') {
 		return function(name) {
@@ -137,3 +138,15 @@ var taxiQuestion = interviewQuestions('taxi driver');
 stormtrooperQuestion('Luke');
 taxiQuestion('Travis');
 interviewQuestions('developer')('Bart');
+*/
+// IMMEDIATELY INVOKED FUNCTION EXPRESSION
+function game() {
+	var score = Math.random() * 10;
+	console.log(score >= 5);
+}
+game();
+
+(function(goodLuck) {
+	var score = Math.random() * 10;
+	console.log(score >= 5 - goodLuck);
+})(5);
