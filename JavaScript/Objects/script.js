@@ -153,6 +153,7 @@ game();
 })(5);
 */
 // CLOSURES
+/*
 function retirement(retirementAge) {
 	var a = ' years left until retirement.';
 	return function(yearOfBirth) {
@@ -168,3 +169,40 @@ var retirementIceland = retirement(67);
 retirementGermany(1995);
 retirementUS(1995);
 retirementIceland(1995);
+*/
+// BIND, CALL AND APPLY
+var bart = {
+	name: 'Bart',
+	age: 24,
+	job: 'developer',
+	presentation: function(style, timeOfDay) {
+		if (style === 'formal') {
+			console.log('Good ' + timeOfDay + ', Ladies and Gentlemen. I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+		} else if (style === 'informal') {
+			console.log('What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '!');
+		}
+	}
+};
+
+var michael = {
+	name: 'Michael',
+	age: 56,
+	job: 'basketball player'
+};
+
+bart.presentation('formal', 'morning');
+
+// // CALL
+bart.presentation.call(michael, 'formal', 'afternoon');
+
+// // APPLY
+// bart.presentation.apply(michael, ['formal', 'afternoon']);
+
+// // BIND
+var bartInformal = bart.presentation.bind(bart, 'informal');
+
+bartInformal('morning');
+bartInformal('night');
+
+var michaelFormal = bart.presentation.bind(michael, 'formal');
+michaelFormal('afternoon');
