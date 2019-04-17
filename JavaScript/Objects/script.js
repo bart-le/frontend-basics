@@ -140,6 +140,7 @@ taxiQuestion('Travis');
 interviewQuestions('developer')('Bart');
 */
 // IMMEDIATELY INVOKED FUNCTION EXPRESSION
+/*
 function game() {
 	var score = Math.random() * 10;
 	console.log(score >= 5);
@@ -150,3 +151,20 @@ game();
 	var score = Math.random() * 10;
 	console.log(score >= 5 - goodLuck);
 })(5);
+*/
+// CLOSURES
+function retirement(retirementAge) {
+	var a = ' years left until retirement.';
+	return function(yearOfBirth) {
+		var age = 2019 - yearOfBirth;
+		console.log((retirementAge - age) + a);
+	}
+}
+
+var retirementUS = retirement(66);
+var retirementPoland = retirement(65);
+var retirementIceland = retirement(67);
+
+retirementGermany(1995);
+retirementUS(1995);
+retirementIceland(1995);
