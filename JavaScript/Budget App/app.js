@@ -40,9 +40,6 @@ var budgetController = (function() {
 
 			data.allItems[type].push(newItem);
 			return newItem;
-		},
-		test: function() {
-			console.log(data);
 		}
 	};
 })();
@@ -52,7 +49,9 @@ var UIController = (function() {
 		inputType: '.add__type',
 		inputDescription: '.add__description',
 		inputValue: '.add__value',
-		inputBtn: '.add__btn'
+		inputBtn: '.add__btn',
+		incomesContainer: '.income__list',
+		expensesContainer: '.expenses__list'
 	};
 	
 	return {
@@ -65,6 +64,22 @@ var UIController = (function() {
 		},
 		getDOMstrings: function() {
 			return DOMstrings;
+		},
+		addListItem: function(obj, type) {
+			var html, newHTML, element;
+
+			if (type === 'inc') {
+				element = DOMstrings.incomesContainer;
+				html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+			} else if (type === 'exp') {
+				element = DOMstrings.expensesContainer;
+				html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+			}
+
+			newHTML = html.replace('%description%', obj.description);
+			newHTML = newHTML.replace('%value%', obj.value);
+			newHTML = newHTML.replace('%id%', obj.id);
+			document.querySelector(element).insertAdjacentHTML('beforeend', newHTML);
 		}
 	};
 })();
@@ -88,6 +103,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 		input = UICtrl.getInput();
 
 		newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+
+		UICtrl.addListItem(newItem, input.type);
 	};
 
 	return {
