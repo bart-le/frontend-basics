@@ -80,6 +80,18 @@ var UIController = (function() {
 			newHTML = newHTML.replace('%value%', obj.value);
 			newHTML = newHTML.replace('%id%', obj.id);
 			document.querySelector(element).insertAdjacentHTML('beforeend', newHTML);
+		},
+		clearFields: function() {
+			var fields;
+			
+			fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
+
+			fieldsArr = Array.prototype.slice.call(fields);
+			fieldsArr.forEach(function(current) {
+				current.value = '';
+			});
+
+			fields[0].focus();
 		}
 	};
 })();
@@ -105,6 +117,8 @@ var controller = (function(budgetCtrl, UICtrl) {
 		newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
 		UICtrl.addListItem(newItem, input.type);
+
+		UICtrl.clearFields();
 	};
 
 	return {
