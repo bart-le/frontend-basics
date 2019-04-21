@@ -1,5 +1,5 @@
 // VAR, LET AND CONST
-
+/*
 // // DECLARATION
 var name5 = 'Jane Smith';
 var age5 = 23;
@@ -43,3 +43,19 @@ for (var i = 0; i < 5; i++) {
 }
 
 console.log(i);
+*/
+// IIFE AND BLOCKS
+// // ES6
+{
+	const a = 1;
+	let b = 2;
+	var c = 3;
+}
+// console.log(a + b);
+console.log(c);
+
+// // ES5
+(function() {
+	var c = 3;
+})();
+// console.log(c);
