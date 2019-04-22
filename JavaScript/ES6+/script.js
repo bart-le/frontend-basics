@@ -171,6 +171,7 @@ Person.prototype.myFriends6 = function(friends) {
 new Person('Elon').myFriends6(friends);
 */
 // DESTRUCTURING
+/*
 // // ES5
 var bart = ['Bart', 24];
 var name5 = bart[0];
@@ -203,3 +204,48 @@ function calcAgeRetirement(year) {
 const [age, retirement] = calcAgeRetirement(1995);
 console.log(age);
 console.log(retirement);
+*/
+// ARRAY METHODS
+const boxes = document.querySelectorAll('.box');
+
+// // CONVERTING NODELIST TO ARRAY IN ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(current) {
+	current.style.backgroundColor = 'dodgerblue';
+});
+
+// // CONVERTING NODELIST TO ARRAY IN ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(current => {
+	current.style.backgroundColor = 'dodgerblue';
+});
+
+// // FOR LOOP IN ES5
+for (var i = 0; i < boxesArr5.length; i++) {
+	if (boxesArr5[i].className === 'box blue') {
+		continue;
+	}
+	boxesArr5[i].textContent = 'Switched to blue.';
+}
+
+// // FOR OF LOOP IN ES6
+for (const current of boxesArr6) {
+	if (current.className.includes('blue')) {
+		continue;
+	}
+	current.textContent = 'Switched to blue.';
+}
+
+var ages = [12, 17, 8, 21, 14, 11];
+
+// // FINDING ARRAY ELEMENTS IN ES5
+var legal = ages.map(function(cur) {
+	return cur >= 18;
+});
+console.log(legal);
+console.log(legal.indexOf(true));
+console.log(ages[legal.indexOf(true)]);
+
+// // FINDING ARRAY ELEMENTS IN ES6
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
