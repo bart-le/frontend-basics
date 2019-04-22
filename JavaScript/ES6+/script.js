@@ -281,6 +281,7 @@ Array.from(all).forEach(cur => cur.style.color = 'purple');
 */
 // REST PARAMETER
 // // ES5
+/*
 function isLegal5() {
 	var argsArr = Array.prototype.slice.call(arguments);
 	argsArr.forEach(function(cur) {
@@ -309,3 +310,27 @@ function isLegalLimit6(limit, ...years) {
 	years.forEach(cur => console.log((2019 - cur) >= limit));
 }
 isLegalLimit6(16, 1995, 2003, 1969);
+*/
+// DEFAULT PARAMETERS
+function Person5(firstName, yearOfBirth, lastName, nationality) {
+	lastName === undefined ? lastName = 'Jordan' : lastName = lastName;
+	nationality === undefined ? nationality = 'American' : nationality = nationality;
+
+	this.firstName = firstName;
+	this.yearOfBirth = yearOfBirth;
+	this.lastName = lastName;
+	this.nationality = nationality;
+}
+var michael = new Person5('Michael', 1963);
+console.log(michael);
+var kyrie = new Person5('Kyrie', 1992, 'Irving', 'Australian');
+console.log(kyrie);
+
+function Person6(firstName, yearOfBirth, lastName = 'Bond', nationality = 'British') {
+	this.firstName = firstName;
+	this.yearOfBirth = yearOfBirth;
+	this.lastName = lastName;
+	this.nationality = nationality;
+}
+var james = new Person6('James', 1968);
+console.log(james);
