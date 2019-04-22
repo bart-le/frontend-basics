@@ -252,6 +252,7 @@ console.log(ages.findIndex(cur => cur >= 18));
 console.log(ages.find(cur => cur >= 18));
 */
 // SPREAD OPERATOR
+/*
 function addNumbers(a, b, c, d) {
 	return a + b + c + d;
 }
@@ -277,3 +278,34 @@ const heading = document.querySelector('h1');
 const boxes = document.querySelectorAll('.box');
 const all = [heading, ...boxes];
 Array.from(all).forEach(cur => cur.style.color = 'purple');
+*/
+// REST PARAMETER
+// // ES5
+function isLegal5() {
+	var argsArr = Array.prototype.slice.call(arguments);
+	argsArr.forEach(function(cur) {
+		console.log((2019 - cur) >= 18);
+	});
+}
+isLegal5(1995, 2003, 1969);
+isLegal5(1995, 2003, 1969, 1950, 2010);
+// // ES6
+function isLegal6(...years) {
+	years.forEach(cur => console.log((2019 - cur) >= 18));
+}
+isLegal6(1995, 2003, 1969);
+
+// // MULTIPLE ARGUMENTS IN ES5
+function isLegalLimit5(limit) {
+	var argsArr = Array.prototype.slice.call(arguments, 1);
+	argsArr.forEach(function(cur) {
+		console.log((2019 - cur) >= limit);
+	});
+}
+isLegalLimit5(21, 1995, 2003, 1969);
+
+// // MULTIPLE ARGUMENTS IN ES6
+function isLegalLimit6(limit, ...years) {
+	years.forEach(cur => console.log((2019 - cur) >= limit));
+}
+isLegalLimit6(16, 1995, 2003, 1969);
