@@ -206,6 +206,7 @@ console.log(age);
 console.log(retirement);
 */
 // ARRAY METHODS
+/*
 const boxes = document.querySelectorAll('.box');
 
 // // CONVERTING NODELIST TO ARRAY IN ES5
@@ -249,3 +250,30 @@ console.log(ages[legal.indexOf(true)]);
 // // FINDING ARRAY ELEMENTS IN ES6
 console.log(ages.findIndex(cur => cur >= 18));
 console.log(ages.find(cur => cur >= 18));
+*/
+// SPREAD OPERATOR
+function addNumbers(a, b, c, d) {
+	return a + b + c + d;
+}
+
+var sum1 = addNumbers(1, 2, 4, 8);
+console.log(sum1);
+
+// // ES5
+var numbers = [1, 2, 4, 8];
+var sum2 = addNumbers.apply(null, numbers);
+console.log(sum2);
+
+// // ES6
+const sum3 = addNumbers(...numbers);
+console.log(sum3);
+
+const dough = ['yeast', 'sugar', 'water', 'salt', 'flour', 'olive oil'];
+const topping = ['tomatoes', 'oregano', 'mozzarella', 'parmesan'];
+const pizza = [...dough, 'bacon', ...topping];
+console.log(pizza);
+
+const heading = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [heading, ...boxes];
+Array.from(all).forEach(cur => cur.style.color = 'purple');
