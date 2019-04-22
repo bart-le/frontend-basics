@@ -108,6 +108,7 @@ ages6 = years.map((el, index) => {
 console.log(ages6);
 */
 // ARROW FUNCTIONS LEXICAL THIS
+/*
 // // ES5 OBJECT FUNCTION
 var box5 = {
 	color: 'green',
@@ -168,3 +169,37 @@ Person.prototype.myFriends6 = function(friends) {
 	console.log(arr);
 };
 new Person('Elon').myFriends6(friends);
+*/
+// DESTRUCTURING
+// // ES5
+var bart = ['Bart', 24];
+var name5 = bart[0];
+var age5 = bart[1];
+
+// // ES6
+const [name6, age6] = ['Bart', 24];
+console.log(name6);
+console.log(age6);
+
+const obj = {
+	firstName: 'Bart',
+	lastName: 'Le'
+};
+
+const {firstName, lastName} = obj;
+console.log(firstName);
+console.log(lastName);
+
+const {firstName: a, lastName: b} = obj;
+console.log(a);
+console.log(b);
+
+// // RETURNING VALUES
+function calcAgeRetirement(year) {
+	const age = new Date().getFullYear() - year;
+	return [age, 65 - age];
+}
+
+const [age, retirement] = calcAgeRetirement(1995);
+console.log(age);
+console.log(retirement);
