@@ -312,6 +312,7 @@ function isLegalLimit6(limit, ...years) {
 isLegalLimit6(16, 1995, 2003, 1969);
 */
 // DEFAULT PARAMETERS
+/*
 function Person5(firstName, yearOfBirth, lastName, nationality) {
 	lastName === undefined ? lastName = 'Jordan' : lastName = lastName;
 	nationality === undefined ? nationality = 'American' : nationality = nationality;
@@ -334,3 +335,37 @@ function Person6(firstName, yearOfBirth, lastName = 'Bond', nationality = 'Briti
 }
 var james = new Person6('James', 1968);
 console.log(james);
+*/
+// MAPS
+const question = new Map();
+question.set('question', 'Who\'s the current owner of Charlotte Hornets?');
+question.set(1, 'Shaquille O\'Neal');
+question.set(2, 'Jerry West');
+question.set(3, 'Michael Jordan');
+question.set(4, 'Charles Barkley');
+question.set('correct', 3);
+question.set(true, 'Correct!');
+question.set(false, 'Wrong.');
+
+console.log(question.get('question'));
+console.log(question.size);
+
+if (question.has(4)) {
+	// question.delete(4);
+	console.log('Answer 4 is here.');
+}
+
+// question.clear();
+
+question.forEach((value, key) => {
+	console.log(`This is ${key} and it's set to ${value}`);
+});
+
+for (let [key, value] of question.entries()) {
+	if (typeof(key) === 'number') {
+		console.log(`Answer ${key}: ${value}`);
+	}
+}
+
+const ans = parseInt(prompt('The answer is:'));
+console.log(question.get(ans === question.get('correct')));
