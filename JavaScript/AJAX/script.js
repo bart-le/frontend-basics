@@ -61,6 +61,7 @@ getIDs
 });
 */
 // ASYNC/AWAIT
+/*
 const getIDs = new Promise((resolve, reject) => {
 	setTimeout(() => {
 		resolve([123, 234, 345, 456]);
@@ -96,3 +97,23 @@ async function getRecipesAW() {
 	return recipe;
 }
 getRecipesAW().then(result => console.log(`${result} is the best!`));
+*/
+// AJAX CALLS WITH FETCH AND PROMISES
+function getWeather(woeid) {
+	fetch
+	(`https://www.metaweather.com/api/location/${woeid}/`)
+	.then(result => {
+		console.log(result);
+		return result.json();
+	})
+	.then(data => {
+		console.log(data);
+		const today = data.consolidated_weather[0];
+		console.log(`Temperature in ${data.title} is between ${today.min_temp} and ${today.max_temp} degrees Celcius.`);
+	})
+	.catch(error => {
+		console.log(error);
+	});
+}
+getWeather(523920);
+getWeather(123456789);
