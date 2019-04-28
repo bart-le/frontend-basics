@@ -99,6 +99,7 @@ async function getRecipesAW() {
 getRecipesAW().then(result => console.log(`${result} is the best!`));
 */
 // AJAX CALLS WITH FETCH AND PROMISES
+/*
 function getWeather(woeid) {
 	fetch
 	(`https://www.metaweather.com/api/location/${woeid}/`)
@@ -117,3 +118,23 @@ function getWeather(woeid) {
 }
 getWeather(523920);
 getWeather(123456789);
+*/
+// AJAX CALLS WITH FETCH AND ASYNC/AWAIT
+async function getWeatherAW(woeid) {
+	try {
+		const result = await fetch(`https://www.metaweather.com/api/location/${woeid}/`);
+		const data = await result.json();
+		const tomorrow = data.consolidated_weather[1];
+		console.log(`Tomorrow, the temperature in ${data.title} is between ${tomorrow.min_temp} and ${tomorrow.max_temp} degrees Celcius.`);
+		return data;
+	} catch(error) {
+		console.log(error);
+	}
+}
+getWeatherAW(523920);
+
+let tokyoTomorrow;
+getWeatherAW(1118370).then(data => {
+	tokyoTomorrow = data;
+	console.log(tokyoTomorrow);
+});
