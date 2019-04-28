@@ -19,6 +19,7 @@ function getRecipe() {
 getRecipe();
 */
 // PROMISE
+/*
 const getIDs = new Promise((resolve, reject) => {
 	setTimeout(() => {
 		resolve([123, 234, 345, 456]);
@@ -58,3 +59,40 @@ getIDs
 .catch(error => {
 	console.log('Error!');
 });
+*/
+// ASYNC/AWAIT
+const getIDs = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve([123, 234, 345, 456]);
+	}, 1500);
+});
+
+const getRecipe = recID => {
+	return new Promise((resolve, reject) => {
+		setTimeout(ID => {
+			const recipe = {title: 'Tonkotsu Miso Ramen', publisher: 'Bart'};
+			resolve(`${ID}: ${recipe.title}`);
+		}, 1500, recID);
+	});
+};
+
+const getRelated = publisher => {
+	return new Promise ((resolve, reject) => {
+		setTimeout(pub => {
+			const recipe = {title: 'Takoyaki', publisher: 'Bart'};
+			resolve(`${pub}: ${recipe.title}`);
+		}, 1500, publisher);
+	});
+};
+
+async function getRecipesAW() {
+	const IDs = await getIDs;
+	console.log(IDs);
+	const recipe = await getRecipe(IDs[2]);
+	console.log(recipe);
+	const related = await getRelated('Bart');
+	console.log(related);
+
+	return recipe;
+}
+getRecipesAW().then(result => console.log(`${result} is the best!`));
