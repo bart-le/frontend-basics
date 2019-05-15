@@ -1,4 +1,6 @@
 import Search from './models/Search';
+import * as searchView from './views/searchView';
+import { elements } from "./views/base";
 
 // GLOBAL STATE OF THE APP
 // SEARCH OBJECT
@@ -11,20 +13,22 @@ const state = {
 
 const controlSearch = async() => {
 	// GET QUERY FROM VIEW
-	const query = 'ramen';
+	const query = searchView.getInput();
 
 	if (query) {
 		// NEW SEARCH OBJECT AND ADD TO STATE
 		state.search = new Search(query);
 		// PREPARE UI FOR RESULTS
+		searchView.clearInput();
+		searchView.clearResults();
 		// SEARCH FOR RECIPES
 		await state.search.getResults();
 		// RENDER RESULTS ON UI
-		console.log(state.search.result)
+		searchView.renderResults(state.search.result);
 	}
-}
+};
 
-document.querySelector('.search').addEventListener('submit', e => {
+elements.searchForm.addEventListener('submit', e => {
 	e.preventDefault();
 	controlSearch();
 });
