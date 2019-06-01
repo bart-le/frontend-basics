@@ -60,7 +60,6 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async () => {
 	// GET ID FROM URL
 	const id = window.location.hash.replace('#', '');
-	console.log(id);
 
 	if (id) {
 		// PREPARE UI FOR CHANGES
@@ -119,8 +118,6 @@ elements.shopping.addEventListener('click', e => {
 	}
 });
 
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
 /* LIKE CONTROLLER */
 const controlLike = () => {
 	if (!state.likes) state.likes = new Likes();
@@ -150,6 +147,17 @@ const controlLike = () => {
 	}
 	likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
+
+// RESTORE LIKED RECIPES ON PAGE LOAD
+window.addEventListener('load', () => {
+	state.likes = new Likes();
+	// RESTORE LIKES
+	state.likes.readStorage();
+	// TOGGLE LIKE MENU BUTTON
+	likesView.toggleLikeMenu(state.likes.getNumLikes());
+	// RENDER EXISTING LIKES
+	state.likes.likes.forEach(like => likesView.renderLike(like));
+});
 
 // HANDLING RECIPE BUTTON CLICKS
 elements.recipe.addEventListener('click', e => {
