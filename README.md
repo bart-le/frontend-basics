@@ -7,7 +7,7 @@ ___
 
 ## **UDEMY COURSES**
 * [x] HTML/CSS
-* [ ] JavaScript
+* [x] JavaScript
 * [ ] React/Redux
 * [ ] Vue.js
 * [ ] Node.js
@@ -17,6 +17,7 @@ ___
 ## **LINKS TO CERTIFICATES**
 * [infoShare](https://github.com/bart-le/frontend-basics/blob/master/certificate.pdf)
 * [HTML/CSS](https://www.udemy.com/certificate/UC-507NGGTJ)
+* [JavaScript](https://www.udemy.com/certificate/UC-Q52AVRAC)
 
 ## **TECHNOLOGIES I KNOW SO FAR**
 * HTML
