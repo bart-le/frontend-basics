@@ -8,6 +8,7 @@ ___
 ## **UDEMY COURSES**
 * [x] HTML/CSS
 * [x] JavaScript
+* [ ] TypeScript
 * [ ] React/Redux
 * [ ] Vue.js
 * [ ] Node.js
