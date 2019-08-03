@@ -1,2 +1,9 @@
 # WebStorm settings
 /.idea
+
+# dependencies
+/TypeScript/maps/node_modules/
+
+# cache and build
+/TypeScript/maps/.cache/
+/TypeScript/maps/dist/
