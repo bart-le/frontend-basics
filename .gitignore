@@ -3,7 +3,9 @@
 
 # dependencies
 /TypeScript/maps/node_modules/
+/TypeScript/sort/node_modules/
 
 # cache and build
 /TypeScript/maps/.cache/
 /TypeScript/maps/dist/
+/TypeScript/sort/build/
