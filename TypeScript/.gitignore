@@ -1,0 +1,8 @@
+# dependencies
+/maps/node_modules/
+/sort/node_modules/
+
+# cache and build
+/maps/.cache/
+/maps/dist/
+/sort/build/
